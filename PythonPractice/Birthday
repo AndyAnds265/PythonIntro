@@ -1,0 +1,20 @@
+import datetime 
+# import datetime isn't currently helpful - adding more complicated answers.
+import re
+
+#library for months
+months = {'1':'January','2':'February','3':'March','4':'April','5':'May','6':'June','7':'July','8':'August','9':'September','10':'October','11':'November','12':'December'} 
+
+#function to lookup library and return word month from number
+def month_exchange(string,dictionary):
+    for key in months.keys():
+        string = re.sub(key,dictionary[key],string)
+    return string
+
+
+name2 = input('Hello friend! What is your name?')
+y1 = int(input('In what year were you born ' + name2 + '?'))
+m1 = (input('In what month were you born (type number please) ' + name2 + '?'))
+month_exchange(m1,months)
+d1 = int(input('Last question, which day in {} were you born {}?'.format(month_exchange(m1,months),name2)))
+print ('Great, so you were born on {}/{}/{} that would be {}/{}/{} if you are European'.format(m1,d1,y1,d1,m1,y1))
