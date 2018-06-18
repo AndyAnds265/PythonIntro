@@ -1,0 +1,8 @@
+print('Hello!')
+
+word_test = input('Friend, please type a word: ')
+
+if word_test == word_test[::-1]:
+    print ('This word is a palindrome!')
+else:
+    print ('This word is not a palindrome.')
