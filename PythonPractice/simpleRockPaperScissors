@@ -1,0 +1,56 @@
+print('Hello all!')
+
+#get players names
+player1 = input('Player 1, please type your name: ')
+print('Nice to meet you!' + ' ' + player1)
+player2 = input('Now, player 2, please type your name: ')
+print(player2 + ', ' + 'nice to meet you as well')
+
+#define inputs
+x = 'rock'
+y = 'paper'
+z = 'scissors'
+
+#define play again question
+def play_again():
+    while True:
+        ans = str(input('Play again? '))
+        if ans == 'y':
+            play_time()
+        elif ans == 'n':
+            print('Thanks for playing! Have a great day.')
+            break
+        else:
+            print('I did not understand your input.')
+            continue
+
+#define game play and how to determine winner and loser
+def game_play(a,b):
+    
+    if a == b:
+        print('Tie game! Start again.')
+        play_again()
+    elif a == x and b == z:
+        print('Rock beats scissors! Player 1 wins!')
+    elif a == x and b == y:
+        print('Paper beats rock! Player 2 wins!')
+    elif a == y and b == z:
+        print('Scissors cuts paper! Player 2 wins!')
+    elif a == y and b == x:
+        print('Paper beats rock! Player 1 wins!')
+    elif a == z and b == x:
+        print('Rock beats scissors! Player 2 wins!')
+    elif a == z and b == y:
+        print('Scissors cuts paper! Player 1 wins!')
+    else: 
+        print('Please choose rock, paper, or scissors')
+
+#initiate game play
+def play_time():
+    
+    a = str(input(player1 + ', which do you choose: '))
+    b = str(input(player2 + ', which do you choose: '))
+    game_play(a,b)
+
+#run game
+play_time()
