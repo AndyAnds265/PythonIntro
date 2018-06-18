@@ -1,0 +1,12 @@
+print('Hello')
+
+num_quest = int(input('Please type a number between 1-100: '))
+
+num_list = range(1,num_quest+1)
+
+divisors_list = []
+
+for num in num_list:
+    if num_quest % num == 0:
+        divisors_list.append(num)
+print(divisors_list)
