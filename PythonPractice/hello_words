@@ -1,0 +1,44 @@
+world_hellos = {'spanish':'Hola','español':'Hola','french':'Salut','française':'Salut','farsi':'سلام',}
+
+print ('Hello World!')
+
+playername = input('What is your name? ')
+
+game_intro()
+
+def game_intro():
+    print ('We are going to play a very simple language game. You will need to enter your native language and I will guess how to say hello in that language.')
+    print ('Sounds simple enough right?')
+    game_on()
+      
+def game_play():
+    
+    while True:
+    
+        native_language = input('What is your native language? ').lower()
+    
+        if native_language in world_hellos:
+            print (world_hellos[native_language] + ' ' + playername)
+
+        else: 
+            print('Sorry, please try your language again.')
+            continue
+        break
+
+def game_on():
+    
+    while True:
+        answer = input('Type yes or no (or y or n) ')
+        
+        if answer[0].lower()=='y':
+            print ('Let us get started')
+
+        elif answer[0].lower()=='n':
+            print ('Sorry the directions were not clear. Please try again at a later time.')
+        
+        else:
+            print('Sorry, please try your answer again.')
+            continue 
+        break
+    
+    game_play()
