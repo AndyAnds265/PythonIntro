@@ -1,0 +1,27 @@
+#import random module and set up global variables
+
+import random
+num = random.randint(1,11)
+a = 0
+b = 0
+
+#while loop, ends on positive guess or an input value of 999
+while num != a:
+    
+    a = int(input('Guess a number between 1 and 10: '))
+    
+    if a == 999:
+        print('Thanks for playing!')
+        break
+
+    if num == a:
+        print('You are a rockstar. Great job!')
+        print('It took you {} tries.'.format(b))
+    elif num > a: 
+        print('Your guess is too low. Try again.')
+        b += 1
+    elif num < a: 
+        print('Your guess is too high. Try again.')
+        b += 1
+    else:
+        print('Wrong input.')
