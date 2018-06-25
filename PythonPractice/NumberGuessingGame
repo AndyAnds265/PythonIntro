@@ -10,10 +10,6 @@ while num != a:
     
     a = int(input('Guess a number between 1 and 10: '))
     
-    if a == 999:
-        print('Thanks for playing!')
-        break
-
     if num == a:
         print('You are a rockstar. Great job!')
         print('It took you {} tries.'.format(b))
