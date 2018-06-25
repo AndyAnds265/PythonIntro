@@ -1,0 +1,38 @@
+def fibo():
+    
+    #taking any given number of list items
+    num = int(input('How many fibonacci numbers shall we calculate? '))
+    
+    #in order to be able to call position[1]
+    i = 1
+    
+    # if 0 no fibonacci sequence can be created
+    if num == 0:
+        fibo_list = []
+        print ('You have an empty fibonacci sequence. Try again.')
+        fibo()
+    
+    # if number is 1, there will only be 1 number therefore no sequence
+    elif num == 1:
+        fibo_list = [1]
+    
+    # if number is 2, there will only be 2 numbers and both will be 1 since the variables haven't been able to add together the two preceding variables yet
+    elif num == 2:
+        fibo_list = [1,1]
+    
+    #starting with 3 and up, we will need to add a value to the sequence
+    elif num > 2:
+        fibo_list = [1,1]
+        
+    #need a while loop to reduce num to 0. we can take advantage or i's value of 1 in the loop since 2-1 = 1, which would already be a situation covered by previous elif statements
+    # for example, if num is chosen were 3, the fibo_list will be: [1,1,2]
+    # because
+    # i < 3-1 (which is 2)
+    # so, fibo_list [1,1]
+    # so, in position [2] we will append 1+1
+    # then, we will add 1 to i so that the position will become [3]
+    #then, i < 2-1 == is not less than i (which) is 1 so the loop stops
+        while i < (num - 1):
+            fibo_list.append(fibo_list[i] + fibo_list[i-1])
+            i += 1
+        return fibo_list
