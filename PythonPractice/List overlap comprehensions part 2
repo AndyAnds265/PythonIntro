@@ -1,0 +1,20 @@
+#given 2 lists, use 1 line of code to pull overlapping values
+a = [1, 1, 2, 3, 5, 8, 13, 21, 34, 55, 89]
+b = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13]
+c = [x for x in a if x in b]
+
+#alternatively, to pull values only once, using a set, then creating a list again
+a = [1, 1, 2, 3, 5, 8, 13, 21, 34, 55, 89]
+b = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13]
+c = set(x for x in a if x in b)
+d = [x for x in c]
+
+
+#randomized
+
+import random
+
+f = random.sample(range(100),60)
+g = random.sample(range(75),35)
+
+new_list = [x for x in f if x in g]
