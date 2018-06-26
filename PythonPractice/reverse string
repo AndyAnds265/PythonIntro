@@ -1,0 +1,21 @@
+
+#create a function that reverses a string
+def reverse_string(str):
+    
+    #first, let's split the string up into words
+    rev = str.split()
+    
+    #second, let's reverse the list
+    rev.reverse()
+    
+    #third, let's create a new string by joining all values in rev, but separating them with a space
+    rev_final = " " .join(rev)
+    
+    #fourth, let's print the updated string.
+    return(rev_final)
+    
+    
+    #as a fun exercise, we can reverse every letter in the string
+    def reverse_string2(x):
+    y = x[::-1]
+    return(y)
