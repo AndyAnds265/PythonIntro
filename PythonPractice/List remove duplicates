@@ -1,1 +1,8 @@
+import random
 
+# will create 2 lists containing numbers from range 1-9. So basically one duplicate of each. Then make a new list by adding them together. Then create a set
+a = random.sample(range(10),10)
+b = random.sample(range(10),10)
+c = a+b
+
+set(c)
